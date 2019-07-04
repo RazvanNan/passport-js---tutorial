@@ -50,7 +50,7 @@ if(!isProduction) {
   });
 }
 
-app.use((err, req, res) => {
+app.use((req, res, err) => {
   res.status(err.status || 500);
 
   res.json({
